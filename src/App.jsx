@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import RadialProgress from "./components/RadialProgress";
-// import Progress from "./components/Progress";
-// import { typeScale, intakeActions, intakeLevelClasses } from "./constants.js";
 import { typeScale } from "./constants.js";
 import Buttons from "./components/Buttons";
+import Summary from "./components/Summary";
 
 function App() {
   const [goal, setGoal] = useState(() => {
@@ -52,36 +51,7 @@ function App() {
           typeScale={typeScale}
         />
 
-        {/* <Progress
-          percentage={percentage}
-          current={current}
-          goal={goal}
-          addWater={addWater}
-          intakeActions={intakeActions}
-          intakeLevelClasses={intakeLevelClasses}
-        /> */}
-
-        <div className="flex items-center justify-center gap-4 p-4 mb-8">
-          <p>You've had: {current} oz</p>
-          <p>Still to go: {goal - current} oz</p>
-        </div>
-        {/* <div className="flex gap-4 items-center justify-center mb-4">
-          <button className="btn btn-info px-8" onClick={() => addWater(4)}>
-            + 4 oz
-          </button>
-          <button className="btn btn-info px-8" onClick={() => addWater(8)}>
-            + 8 oz
-          </button>
-        </div>
-        <div className="flex gap-4 items-center justify-center mb-8">
-          <button className="btn btn-info px-8" onClick={() => addWater(12)}>
-            + 12 oz
-          </button>
-          <button className="btn btn-info px-8" onClick={() => addWater(16)}>
-            + 16 oz
-          </button>
-        </div>
-         */}
+        <Summary current={current} goal={goal} />
 
         <Buttons onClick={addWater} />
         <div className="flex gap-4 items-center justify-center mb-4">
