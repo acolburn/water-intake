@@ -23,21 +23,21 @@ export default defineConfig({
         start_url: "/water-intake/",
         icons: [
           {
-            src: "icons/icon-192x192.svg",
+            src: "/android-chrome-192x192.png",
             sizes: "192x192",
-            type: "image/svg+xml",
+            type: "image/png",
             purpose: "any",
           },
           {
-            src: "icons/icon-512x512.svg",
+            src: "/android-chrome-512x512.png",
             sizes: "512x512",
-            type: "image/svg+xml",
+            type: "image/png",
             purpose: "any",
           },
           {
-            src: "icons/maskable-icon.svg",
+            src: "/android-chrome-512x512.png",
             sizes: "512x512",
-            type: "image/svg+xml",
+            type: "image/png",
             purpose: "maskable",
           },
         ],
